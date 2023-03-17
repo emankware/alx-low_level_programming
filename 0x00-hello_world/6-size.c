@@ -1,25 +1,22 @@
 #include <stdio.h>
+
 /**
- * main - counts the size in bytes
+ * main - Entry point
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int c;/*represents char*/
-	int i;/*represents interger*/
-	int f;/*represents float*/
-	int l;/*represents long interger*/
+	int a;
+	long int b;
+	long long int c;
+	char d;
+	float f;
 
-	printf("the size of char,\n");
-	scanf("%c", &c);
-	printf("the size of float,\n");
-	scanf("%f", &f);
-	printf("the size of interger,\n");
-	scanf("%d", &d);
-	printf("the size of long interger,\n");
-	scanf("%ld", &l);
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
 	return (0);
 }
-
-
