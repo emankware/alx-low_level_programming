@@ -11,20 +11,21 @@
 int main(void)
 {
 	int n;
-
+	int b:
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 5)
+	b = n % 10
+	if (b > 5)
 	{
-	printf("%d and is greater than 5\n", n);
+	printf("%d and is greater than 5\n", b);
 	}
-	else if (n < 6)
+	else if ((b < 6) && (b<0))
 	{
-	printf("%d and is less than 6 and not 0\n", n);
+	printf("%d and is less than 6 and not 0\n", b);
 	}
 	else
 	{
-	printf("%d and is 0\n", n);
+	printf("%d and is 0\n", d);
 	}
 	return (0);
 }
