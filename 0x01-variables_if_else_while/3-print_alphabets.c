@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 /**
  * main - alphabets in lowercase
@@ -7,19 +6,15 @@
  */
 int main(void)
 {
-	int ch = 'a'
-	int CH = 'A';
+	char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i;
 
-	while (ch <= 'z')
+	for (i = 0; i < 52; i++)
 	{
-		putchar(ch);
-		ch++;
-	}
-	while (CH <= 'Z')
-	{
-		putchar(CH);
-		CH++;
+		putchar(alp[i]);
 	}
 	putchar('\n');
 	return (0);
 }
+
+
