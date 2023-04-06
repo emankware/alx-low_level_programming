@@ -8,7 +8,7 @@ int _sqrt_recursion(int n);
   * @x: input
   * @root: input
   * Return: value of n if it has a natural square root
-  *  	    -1 if n doesn't have a natural square root
+  *         -1 if n doesn't have a natural square root
   */
 
 int _get_sqrt(int x, int root)
