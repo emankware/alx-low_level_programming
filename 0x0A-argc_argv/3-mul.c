@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - a program that prints all arguments it receives.
+ * main - a program that multiplies two numbers.
  * @argc: argument count
  * @argv: argument vector
  * Return: Always 0 (success)
