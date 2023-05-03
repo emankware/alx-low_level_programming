@@ -10,10 +10,22 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *dew;
+	void *ptr = malloc(b);
 
-	dew = malloc(b);
-	if (dew == NULL)
-		exit(98);
-	return (dew);
+	if (!ptr)
+	{
+		void *p = malloc(sizeof(int));
+
+		if (!p)
+			exit(98);
+
+		free(p);
+		ptr = malloc(b);
+
+		if (!ptr)
+			exit(98);
+	}
+
+	return (ptr);
+
 }
