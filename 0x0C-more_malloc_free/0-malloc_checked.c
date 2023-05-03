@@ -1,9 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * malloc_checked - function that allocates memory using malloc.
+ * malloc_checked - Allocate memory using malloc
+ * and exit with a status value of
+ * 98 if allocation fails. 
  * @b: The number of bytes to allocate.
  * Return: If allocation is successful,a pointer to the allocated memory.
  * Otherwise function exits with a status value of 98.
