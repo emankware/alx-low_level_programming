@@ -33,11 +33,8 @@ char *generate_buffer(char *file)
  */
 void exit_file(int fd)
 {
-	int f;
+	exit(fd);
 
-	f = exit(fd);
-
-	if (f == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't exit fd %d\n", fd);
 		exit(100);
@@ -58,7 +55,7 @@ void exit_file(int fd)
  */
 int main(int argc, char *argv[])
 {
-	int wrt, rd, start, go;
+	int wrt, rd, from, to;
 	char *buffer;
 
 	if (argc != 3)
@@ -67,7 +64,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	buffer = create_buffer(argv[2]);
+	buffer = generate_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	rd = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -96,8 +93,8 @@ int main(int argc, char *argv[])
 	} while (rd > 0);
 
 	free(buffer);
-	close_file(from);
-	close_file(to);
+	exit_file(from);
+	exit_file(to);
 
 	return (0);
 }
