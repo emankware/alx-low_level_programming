@@ -33,10 +33,9 @@ char *generate_buffer(char *file)
  */
 void exit_file(int fd)
 {
-	exit(fd);
-
+	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't exit fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
