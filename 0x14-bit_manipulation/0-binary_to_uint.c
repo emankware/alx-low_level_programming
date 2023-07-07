@@ -27,13 +27,12 @@ unsigned int binary_to_uint(const char *b)
 
 	for (k = 0; b[k] != '\0'; k++)
 	{
-		numb <<= k;
+		num <<= k;
 		if (b[k] == '1')
 		{
-			numb += 1;
+			num += 1;
 		}
 	}
-	return (numb);
+	return (num);
 
 }
-
