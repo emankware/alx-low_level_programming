@@ -3,7 +3,7 @@
 
 /**
  * hash_table_get - function retrieves a value associated with a key
- * @ht: hash table 
+ * @ht: hash table
  * @key: the key being looked for
  *
  * Return: NULL if key couldn’t be found || value associated with the element

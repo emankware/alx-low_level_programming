@@ -3,7 +3,7 @@
 
 /**
  * hash_table_set - this function adds an element to the hash table
- * @ht: hash table 
+ * @ht: hash table
  * @key: the key (can not be an empty string)
  * @value: value associated with the key
  *
